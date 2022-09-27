@@ -17,10 +17,10 @@ namespace OdeTofood.Pages.Restaurant
             _restaurantData = restaurantData;
         }
 
-        public void OnGet()
+        public void OnGet(string name)
         {
             Message = _config["Message"];
-            Restaurants = _restaurantData.GetAll();
+            Restaurants = _restaurantData.GetRestaurantsByName(name);
         }
     }
 }
