@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OdeToFood.Data;
-using OdeToFood.Core;
+
 
 namespace OdeTofood.Pages.Restaurant
 {
@@ -23,7 +23,7 @@ namespace OdeTofood.Pages.Restaurant
         public void OnGet()
         {
 
-            Message = _config["Message"];
+        
             Restaurants = _restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
